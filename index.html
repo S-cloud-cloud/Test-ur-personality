@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./select.css" />
+    <link rel="stylesheet" href="./mask.css" />
+
+    <title>Avatar</title>
+
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+
+  <body>
+    <main>
+      <section class="glass">
+        <p id="tilte">
+          What does your Name say about your<br />
+          PERSONALITY ?
+        </p>
+        <div class="dataDiv">
+          <div>
+            <input
+              type="text"
+              name=""
+              id="name"
+              placeholder="Name"
+              autocomplete="off"
+            />
+          </div>
+          <div class="selector">
+            <div id="selectField" onClick="toggleSelectMenu()">
+              <p id="selectText">Gender</p>
+              <img src="./Img/arrow.png" alt="" srcset="" id="arrowIcon" />
+            </div>
+            <ul id="list" class="hide">
+              <li class="options" onclick="select(`Male`)">
+                <img src="./Img/boy.gif" alt="" srcset="" />
+                <p>Male</p>
+              </li>
+              <li class="options" onclick="select(`Female`)">
+                <img src="./Img/girlG.gif" alt="" srcset="" />
+                <p>Female</p>
+              </li>
+              <li class="options" onclick="select(`Others`)">
+                <img
+                  src="https://img.freepik.com/free-vector/blue-gender-symbol-other-gender_277625-1823.jpg"
+                  alt=""
+                  srcset=""
+                />
+                <p>Others</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="avatar">
+          <img src="./Img/girl.gif" alt="" id="avatarImgScr" />
+        </div>
+        <div class="container" onClick="onSubmit()">
+          <span class="btn">
+            <svg id="svgTag">
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#FF8282" />
+                <stop offset="100%" stop-color="#E178ED" />
+              </linearGradient>
+              <rect
+                x="5"
+                y="5"
+                rx="25"
+                fill="none"
+                stroke="url(#grad1)"
+                width="266"
+                height="50"
+              ></rect>
+            </svg>
+            <span>See</span>
+          </span>
+        </div>
+        <button class="btnMobo" onClick="onSubmit()"><p>See</p></button>
+      </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <div id="alertDiv">
+      <div class="alert h" id="alertSelect">
+        <p>Error: ...</p>
+      </div>
+    </div>
+
+    <script src="./select.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

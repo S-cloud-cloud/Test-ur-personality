@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+h2,
+p {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+main {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background: white;
+    min-height: 90vh;
+    width: 60%;
+    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+#tilte {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.dataDiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#name {
+    outline: none;
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+    font-family: sans-serif;
+    border-width: 0px 0px 2px 0px;
+    border-color: transparent;
+    transition: all 0.3s;
+    text-transform: capitalize;
+}
+
+::placeholder {
+    font-family: sans-serif;
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-family: sans-serif;
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    font-family: sans-serif;
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+#name:hover {
+    border-color: #658ec6;
+}
+
+#name:focus {
+    border-color: #76afff;
+}
+
+#alertDiv {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    padding: 10px 32px;
+    background: white;
+    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 10px;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    margin-bottom: 10px;
+}
+
+.alertShow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.avatar,
+#avatarImgScr {
+    width: 200px;
+    height: 200px;
+}
+
+@media only screen and (max-width: 999px) {
+    #tilte {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #tilte {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .dataDiv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #name {
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .glass {
+        height: 95vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #tilte {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #tilte {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .glass {
+        width: 80%;
+    }
+    #tilte {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #name {
+        width: 150px;
+    }
+    .avatar,
+    #avatarImgScr {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    #tilte {
+        font-size: 0.8rem;
+    }
+}
